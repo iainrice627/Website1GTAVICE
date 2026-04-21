@@ -4,5 +4,5 @@ This is a unvirsity assignment to create a static website with the theme of GTA 
 
 It is hosted on Github and can be seen here:
 
-https://iainrice627.github.io/Website1GTAVICE/legacy.html
+https://iainrice627.github.io/Website1GTAVICE/index.html
 
