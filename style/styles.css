@@ -1,0 +1,453 @@
+/* Font imports */
+@import url('https://fonts.cdnfonts.com/css/pricedown');
+@import url('https://fonts.cdnfonts.com/css/rage-italic');
+
+/* Base page styling */
+body {
+    min-height: 100vh;
+    background-image: url('background.jpg');
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: top left;
+    margin: 60px;
+    padding: 15px;
+
+    position: relative;
+    cursor: url('cursor.cur'), auto;
+}
+
+.container {
+    position: relative;
+    z-index: 9999;
+    /* margin-top: 100vh; Push content below banner */
+    padding: 70px;
+    padding-top: 10px;
+}
+
+
+.border-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('border.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+/* Typography */
+p {
+    font-family: sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #ffffff;
+    padding: 10px 0 0 0;
+    text-shadow: 0 0 5px #000000, 0 0 10px #fd95e0, -1px 1px 2px #fd95e0,  -1.5px 1px 2px #fd95e0;
+    text-align: justify;
+}
+
+a,li {
+    color: #ffffff;
+    text-decoration: none;
+    text-shadow: 0 0 5px #000000, 0 0 10px #fd95e0, -1px 1px 2px #fd95e0,  -1.5px 1px 2px #fd95e0;
+}
+
+/* Headings */
+h1, h2, h3 {
+    font-family: 'Pricedown Bl', sans-serif;
+    color: #fd95e0;
+    text-decoration: underline;
+    text-shadow: 0 0 5px #000000, 0 0 10px #fd95e0, -5px 5px 0 #000,  -5px 5px 0 #fd95e0;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    padding: 10px 0 0 0;
+}
+
+h3 {
+    font-size: 1.5em;
+    padding: 10px 0 0 0;
+}
+
+/* Navigation */
+.btn, .navbar-brand, .nav-link {
+    font-family: 'Pricedown Bl', sans-serif;
+    letter-spacing: 1.5px;
+}
+
+.navbar {
+    padding: 10px 0;
+    z-index: 10005;
+}
+
+.nav-link {
+    color: #fd95e0 !important;
+    font-size: 1.6em;
+    margin: 0 15px;
+    transition: all 0.3s ease;
+    position: relative;
+    text-shadow: -5px 5px 0 #000;
+}
+
+.nav-link:hover {
+    background-color: #198345;
+    border-radius: 3px;
+    transform: scale(1.1);
+}
+
+.navbar-brand {
+    font-size: 3.5em;
+    color: white !important;
+    text-shadow: 0 0 10px #fd95e0, 0 0 10px #fd95e0;
+    -webkit-text-stroke: 0.5px #fd95e0;
+    padding-left: 78px;
+    font-family: 'Rage Italic', sans-serif;
+    transform: rotate(-10deg);
+}
+
+.navbar-toggler {
+    filter: invert(1);
+    margin-right: 20px;
+}
+
+/* Images */
+img.float-left {
+    float: left;
+    margin-right: 20px;
+    max-width: 100%;
+}
+
+img.float-right {
+    float: right;
+    margin-left: 50px;
+    max-width: 100%;
+}
+
+.images-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Set height to viewport height to contain within section one */
+    overflow: hidden; /* Prevent spillover */
+}
+
+
+.banner-container {
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9998;
+    overflow: hidden;
+}
+
+.banner-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* Cover image styling */
+.image-container {
+    position: absolute;
+    top: 10vw;
+    right: 10%;
+    z-index: 9999;
+    width: 20%;
+    transition: 0.3s;
+}
+
+.image-container:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+.image-container img {
+    width: 100%;
+    display: block;
+}
+
+.hover-table {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: calc(100% + 10px);
+    left: auto;
+    /* margin-top: 5vw; */
+    background-color: hsla(315, 100%, 2%, 0.9);
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px #fd95e0;
+    color: #ffffff;
+    z-index: 10005;
+}
+
+.image-container:hover .hover-table {
+    display: block;
+    
+    
+}
+
+.hover-table table {
+    width: 100%; 
+    border-collapse: collapse;
+    margin: 0;
+    
+}
+
+.hover-table th,
+.hover-table td {
+    padding-left: 15px;
+    padding-right: 200px;
+    text-align: left;
+    border: 1px solid hwb(0 100% 0% / 0.422);
+    /* text-shadow: 0 0 5px #000000, 0 0 10px #fd95e0, -5px 5px 0 #000,  -5px 5px 0 #fd95e0; */
+    font-size: 1.3em;
+    white-space: nowrap;
+
+}
+
+
+
+.hover-table th {
+    font-family: 'Pricedown Bl', sans-serif;
+    color: #fd95e0;
+    text-shadow: -2px 2px 2px rgba(0, 0, 0, 0.7), 0 0 25px #fd95e0;
+}
+
+.hover-table td {
+    font-family: 'rage italic', sans-serif;
+    color: #fd95e0;
+    text-shadow: -2px 2px 2px rgba(0, 0, 0, 0.7), 0 0 15px #fff, 0 0 25px #fd95e0, 0 0 35px #fd95e0;
+}
+
+/* Superscript */
+sup {
+    font-size: 0.8em;
+    vertical-align: super;
+    color: #fd95e0; 
+}
+
+sup:hover {
+    text-decoration: underline;
+    text-decoration-color: #fd95e0;
+    cursor: pointer;
+}
+
+/* Blockquotes */
+blockquote {
+    font-family: 'Pricedown Bl', sans-serif;
+    font-size: 1.3em;
+    color: #fd95e0;
+    border: 3px solid #fd95e0;
+    /* margin: 20px 40px; */
+    padding: 15px 30px;
+    background-color: #69afffa2;
+    text-shadow: 
+        -2px 2px 2px rgba(0, 0, 0, 0.7), 
+        0 0 10px #fd95e0,                  
+        0 0 20px #000000;               
+    box-shadow: 0 0 30px rgba(253, 149, 224, 0.2);
+    position: relative;
+    quotes: """" """";
+    transition: all 0.3s ease;
+}
+
+blockquote p {
+    font-size: 1.7em;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    text-shadow: 
+        inherit,                        
+        -1px -1px 1px rgba(0, 0, 0, 0.5); 
+}
+
+blockquote::before,
+blockquote::after {
+    font-size: 2em;
+    position: absolute;
+    color: #fd95e0;
+    text-shadow: 
+        -2px 2px 2px rgba(0, 0, 0, 0.7),
+        0 0 10px #fff,
+        0 0 20px #fd95e0;
+}
+
+blockquote:hover {
+    border-color: #fff;
+    transform: scale(1.01);
+
+    text-shadow: -2px 2px 2px rgba(0, 0, 0, 0.7), 0 0 15px #fff, 0 0 25px #fd95e0, 0 0 35px #fd95e0;
+
+}
+
+
+#section2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 70px;
+}
+
+
+.snap-section {
+    scroll-snap-align: start;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+
+footer li {
+    scroll-margin-top : 170px;
+
+}
+
+/* Multiple images in a row */
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.left-content {
+    flex: 1;
+    margin-right: 20px;
+}
+
+
+.right-image-box {
+    flex: 1;
+    display: block;
+   
+}
+
+.image-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0 0 0;
+    gap: 10px;
+}
+
+.image-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.image-item img {
+    width: 70%;
+    margin: 0;
+}
+
+.caption {
+    font-size: 0.9em;
+    text-align: center;
+    margin: 0 0 0 0;
+    padding-top: 10px;
+}
+
+.group-caption {
+    font-size: 1em;
+    text-align: justify;
+    margin-top: 10px;
+    padding-top: 0;
+}
+
+/* Image */
+
+.image-container-1 {
+    position: relative;
+    float: right;
+    width: 12%;
+    margin-left: 20px;
+    padding-top: 30px;
+}
+
+.image-container-1 img {
+    width: 100%;
+    display: block;
+}
+
+/* Multiple videos in a row */
+.video-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    gap: 50px;
+}
+
+/* more visible link text */
+main a {
+    color: #ffffff;
+    text-decoration: none;
+    text-shadow: 
+    -2px 2px 2px rgba(0, 0, 0, 0.7), 
+    0 0 10px #fd95e0,                  
+    0 0 20px #000000;  
+    font-weight: bolder;
+}
+main a:hover {
+    color: #ffffff;
+    text-decoration: none;
+    text-shadow: -2px 2px 2px rgba(0, 0, 0, 0.7), 0 0 15px #fff, 0 0 25px #fd95e0, 0 0 35px #fd95e0;
+    font-weight: bolder;
+}
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+/* luyen */
+.left-content {
+    flex: 1;
+    margin-right: 20px;
+}
+footer li {
+    scroll-margin-top : 140px;
+
+}
+
+blockquote .citation {
+    font-family: 'Rage Italic', sans-serif; 
+    font-size: 1.4em; 
+    display: block; 
+    text-align: right;
+    margin-top: 10px; 
+    text-shadow: inherit;
+}
+
+.image-container-1:hover img {
+    transform: scale(1.1);
+}
+.image-item:hover img {
+    transform: scale(1.1);
+}
+
+iframe.aboutframe {
+    width:100%;
+    height:0;
+    padding-bottom: 56.25%; 
+}
+
+iframe {
+    border : 0
+}

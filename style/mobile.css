@@ -1,0 +1,235 @@
+/* Mobile-specific styles */
+@media only screen and (max-width: 768px) {
+
+        .border-overlay {
+        display: none !important;
+    }
+
+    /* Base layout adjustments */
+    body {
+        margin: 15px !important;
+        padding: 15px 20px !important; /* Increased side padding */
+        padding-top: 80px !important;
+        background-size: cover;
+    }
+
+    .container {
+        padding: 20px 15px !important; /* Added horizontal padding */
+    }
+
+    /* Navigation adjustments */
+    .navbar-brand {
+        font-size: 2em !important;
+        padding-left: 15px !important;
+        transform: rotate(0deg) !important;
+    }
+
+    .navbar-collapse {
+        background: rgba(0, 0, 0, 0.9) !important;
+        padding: 20px;
+        margin-top: 15px;
+        border: 2px solid #fd95e0 !important;
+        box-shadow: 0 0 15px #fd95e0 !important;
+    }
+    
+    .nav-link {
+        margin: 10px 0 !important;
+        font-size: 1.4em !important;
+    }
+
+    /* Banner and cover image adjustments */
+    .banner-container {
+        height: 60vh; /* Reduced height for mobile */
+        margin-top: -15px;
+    }
+
+    .image-container {
+        top: 20vw !important;
+        right: 7% !important;
+        width: 30% !important;
+   
+        touch-action: manipulation;
+    }
+
+    /* Hover table adjustments */
+    .hover-table {
+        display: none !important;
+        position: fixed !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        width: 90vw !important;
+        max-width: 90vw !important; /* Double constraint for safety */
+        height: auto !important;
+        max-height: 80vh !important; /* Reduced from 70vh for better spacing */
+        overflow-y: auto !important;
+        overflow-x: hidden !important; /* Prevent horizontal overflow */
+        margin: 0 !important;
+        padding: 15px !important;
+        box-sizing: border-box !important; /* Include padding in width */
+    }
+    .hover-table table {
+        width: 100% !important;
+        table-layout: fixed !important; /* Force column control */
+        word-wrap: break-word !important; /* Emergency text break */
+    }
+
+    .image-container:active .hover-table {
+        display: block !important;
+        animation: tableFade 0.2s ease-out;
+    }
+
+    @keyframes tableFade {
+        from { opacity: 0; transform: translate(-50%, -40%); }
+        to { opacity: 1; transform: translate(-50%, -50%); }
+    }
+
+    /* Typography adjustments */
+    h1 {
+        font-size: 2em !important;
+        margin-left: 10px !important;
+    }
+
+    h2 {
+        font-size: 1.5em !important;
+    }
+
+    h3 {
+        font-size: 1.2em !important;
+    }
+
+    p {
+        font-size: 16px !important;
+        padding: 0 10px !important; /* Added text padding */
+        text-shadow: 0 0 3px #000000, 0 0 5px #fd95e0 !important;
+    }
+
+    /* Image and video adjustments */
+    .float-left, .float-right {
+        float: none !important;
+        margin: 15px auto !important; /* Increased margin */
+        display: block;
+        max-width: 90% !important;
+    }
+
+    .images-wrapper {
+        min-height: auto !important;
+        margin-top: -30px;
+        padding: 0 10px !important;
+    }
+
+    .video-container {
+        margin: 15px 0 !important;
+        padding-bottom: 56.25%;
+    }
+
+    /* Table content adjustments */
+    .hover-table th,
+    .hover-table td {
+        white-space: normal !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        max-width: 30vw !important; /* Prevent cell overflow */
+        padding: 12px 10px !important;
+        font-size: 0.9em !important;
+        line-height: 1.3 !important;
+    }
+
+    .hover-table th {
+        font-size: 1em !important; /* Slightly larger headers */
+    }
+
+   
+
+    /* Layout adjustments */
+    .wrapper {
+        flex-direction: column;
+        margin: 0 10px !important;
+    }
+
+    .left-content {
+        margin-right: 0 !important;
+        padding: 0 10px !important;
+    }
+
+    .image-box {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 10px !important;
+    }
+
+    /* Utility adjustments */
+    .snap-section {
+        scroll-snap-align: none !important;
+        min-height: auto !important;
+        padding: 30px 10px !important; /* Added horizontal padding */
+    }
+
+    #section1, #section2, #section3 {
+        padding: 20px 10px !important; /* Added horizontal padding */
+    }
+
+}
+
+/* Very small screens adjustments */
+@media only screen and (max-width: 480px) {
+    body {
+        padding: 15px !important;
+    }
+
+    .navbar-brand {
+        font-size: 1.5em !important;
+        padding-left: 10px !important;
+    }
+
+    .nav-link {
+        font-size: 1em !important;
+    }
+
+    .image-container {
+        width: 45% !important;
+        right: 5% !important;
+        top: 25vw !important;
+    }
+
+    .hover-table {
+        width: 95vw !important;
+        font-size: 0.9em !important;
+    }
+
+    .hover-table th,
+    .hover-table td {
+        padding: 10px 12px !important;
+    }
+
+    blockquote {
+        font-size: 0.9em !important;
+        margin: 10px 5px !important;
+        padding: 10px 15px !important;
+    }
+}
+
+/* Maintain banner positioning */
+.banner-container {
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    width: 100vw;
+    z-index: 9998;
+    overflow: hidden;
+}
+
+/* Preserve image container styling */
+.image-container {
+    position: absolute;
+    z-index: 9999;
+    transition: 0.3s;
+}
+
+.image-container img {
+    width: 100%;
+    display: block;
+    object-fit: contain;
+}
